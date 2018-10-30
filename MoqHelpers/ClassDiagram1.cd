@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MoqHelpers.InSequence.SetupWrappers.InvocableBase&lt;TWrapped&gt;" Collapsed="true">
+    <Position X="2.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYAAAAIAIACAQCEABAAAAABAAAAABAAAAQAAAAAAEAA=</HashCode>
+      <FileName>InSequence\SetUpWrappers\InvocableBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MoqHelpers.InSequence.SetupWrappers.InvocableGet&lt;TMock, TProperty&gt;">
+    <Position X="3" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAkAAAAAQAA=</HashCode>
+      <FileName>InSequence\SetUpWrappers\InvocableGet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MoqHelpers.InSequence.SetupWrappers.InvocableNoReturn&lt;TMock&gt;">
+    <Position X="5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAKAACAAAAABAAAAAAAAAAAEAAAAAQAA=</HashCode>
+      <FileName>InSequence\SetUpWrappers\InvocableNoReturn.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MoqHelpers.InSequence.SetupWrappers.InvocableReturn&lt;TMock, TReturn&gt;">
+    <Position X="0.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAkAAAAAQAA=</HashCode>
+      <FileName>InSequence\SetUpWrappers\InvocableReturn.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MoqHelpers.InSequence.SetupWrappers.VerifiableWrapper&lt;TWrapped&gt;" Collapsed="true">
+    <Position X="2.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAhAAAAAAAEABQAIBAAAABAAIAEACIAAAAoAQEAKAAA=</HashCode>
+      <FileName>InSequence\SetUpWrappers\VerifiableWrapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MoqHelpers.InSequence.InvocableFactory">
+    <Position X="0.75" Y="14.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAQEAAAAAQAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InSequence\InvocableFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MoqHelpers.InSequence.SetUpWrappers.InvocableSequenceNoReturn&lt;TMock&gt;">
+    <Position X="8.5" Y="12.75" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>InSequence\Sequence In Sequence\InvocableSequence\InvocableSequenceNoReturn.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MoqHelpers.InSequence.SetUpWrappers.InvocableSequenceBase&lt;TWrapped, TResponse&gt;">
+    <Position X="6.75" Y="8" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAACAAAAAABAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>InSequence\Sequence In Sequence\InvocableSequence\InvocableSequenceBase.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="InvocationResponder" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MoqHelpers.InSequence.SetUpWrappers.InvocationResponder&lt;TInvocation, TResponse&gt;" Collapsed="true">
+    <Position X="10" Y="10.25" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAEAAABBEAAAABAAAAAIAAAACBEAAAAUAAABAAAA=</HashCode>
+      <FileName>InSequence\Sequence In Sequence\InvocableSequence\InvocationResponder\InvocationResponder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MoqHelpers.InSequence.SetUpWrappers.InvocationReturnResponder&lt;TMock, TReturn, TResponse&gt;" Collapsed="true">
+    <Position X="9.75" Y="11" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>InSequence\Sequence In Sequence\InvocableSequence\InvocationResponder\InvocationReturnResponder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoqHelpers.InSequence.SetUpWrappers.PassOrThrowResponder&lt;T&gt;" Collapsed="true">
+    <Position X="14.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>InSequence\Sequence In Sequence\PassOrThrows\PassOrThrowResponder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoqHelpers.InSequence.SetUpWrappers.ExceptionsOrReturnsInvocationResponder&lt;TMock, TReturn&gt;" Collapsed="true">
+    <Position X="10.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>InSequence\Sequence In Sequence\ExceptionsOrReturns\ExceptionsOrReturnsInvocationResponder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoqHelpers.InSequence.SetUpWrappers.ReturnsInvocationResponder&lt;TMock, TReturn&gt;" Collapsed="true">
+    <Position X="12.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>InSequence\Sequence In Sequence\Returns\ReturnsInvocationResponder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoqHelpers.InSequence.InvocationResponses&lt;TResponse&gt;" Collapsed="true">
+    <Position X="18.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAEAAAAAAABAAAQAAAAAAgAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>InSequence\Sequence In Sequence\InvocableSequence\InvocationResponses\InvocationResponses.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MoqHelpers.InSequence.SetUpWrappers.PassOrThrows" Collapsed="true">
+    <Position X="16.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InSequence\Sequence In Sequence\PassOrThrows\PassOrThrows.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoqHelpers.InSequence.Returns&lt;TReturn&gt;" Collapsed="true">
+    <Position X="14.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InSequence\Sequence In Sequence\Returns\Returns.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoqHelpers.InSequence.ExceptionOrReturn&lt;TReturn&gt;" Collapsed="true">
+    <Position X="13" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAEAAAAAA=</HashCode>
+      <FileName>InSequence\Sequence In Sequence\ExceptionsOrReturns\ExceptionOrReturn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoqHelpers.InSequence.ExceptionsOrReturns&lt;TReturn&gt;" Collapsed="true">
+    <Position X="13" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InSequence\Sequence In Sequence\ExceptionsOrReturns\ExceptionsOrReturns.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoqHelpers.InSequence.SetUpWrappers.InvocableSequenceReturnBase&lt;TMock, TReturn, TResponse&gt;" Collapsed="true">
+    <Position X="5.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAg=</HashCode>
+      <FileName>InSequence\Sequence In Sequence\InvocableSequence\InvocableSequenceReturnBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MoqHelpers.InSequence.SetUpWrappers.InvocableSequenceReturns&lt;TMock, TReturn&gt;" Collapsed="true">
+    <Position X="5.25" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InSequence\Sequence In Sequence\InvocableSequence\InvocableSequenceReturns.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MoqHelpers.InSequence.SetUpWrappers.InvocableSequenceExceptionsOrReturns&lt;TMock, TReturn&gt;" Collapsed="true">
+    <Position X="7.25" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InSequence\Sequence In Sequence\InvocableSequence\InvocableSequenceExceptionsOrReturns.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="MoqHelpers.InSequence.SetupWrappers.IInvocableGet&lt;TMock, TProperty&gt;">
+    <Position X="14.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InSequence\SetUpWrappers\IInvocableGet.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MoqHelpers.InSequence.SetupWrappers.IInvocableNoReturn&lt;TMock&gt;" Collapsed="true">
+    <Position X="16.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InSequence\SetUpWrappers\IInvocableNoReturn.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MoqHelpers.InSequence.SetupWrappers.IInvocableReturn&lt;TMock, TReturn&gt;">
+    <Position X="12.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InSequence\SetUpWrappers\IInvocableReturn.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MoqHelpers.InSequence.SetupWrappers.IVerifiableWrapper" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABQAIAAAAAAAAIAEACAAAAAAAAAAIAAA=</HashCode>
+      <FileName>InSequence\SetUpWrappers\IVerifiableWrapper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MoqHelpers.InSequence.IInvocableInternal&lt;TWrapped&gt;">
+    <Position X="14.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>InSequence\IInvocable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MoqHelpers.InSequence.IInvocable" Collapsed="true">
+    <Position X="14" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAIAAAAAAAAAAAAAAAAAAAAACAAAAAAAACAAA=</HashCode>
+      <FileName>InSequence\IInvocable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MoqHelpers.InSequence.IInvocableFactory">
+    <Position X="0.75" Y="12" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAQEAAAAAQAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InSequence\IInvocableFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MoqHelpers.InSequence.SetUpWrappers.IInvocableSequenceNoReturn&lt;TMock&gt;">
+    <Position X="18.75" Y="7.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InSequence\Sequence In Sequence\InvocableSequence\IInvocableSequenceNoReturn.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MoqHelpers.InSequence.IInvocationResponses&lt;TResponse&gt;" Collapsed="true">
+    <Position X="18" Y="8.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InSequence\Sequence In Sequence\InvocableSequence\InvocationResponses\IInvocationResponses.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MoqHelpers.InSequence.SetUpWrappers.IInvocationResponder&lt;TInvocation, TResponse&gt;" Collapsed="true">
+    <Position X="10.25" Y="8.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAABAAAAAIAAAAAAAAAAAQAAABAAAA=</HashCode>
+      <FileName>InSequence\Sequence In Sequence\InvocableSequence\InvocationResponder\IInvocationResponder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

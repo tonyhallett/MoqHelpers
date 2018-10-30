@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{201CE90B-A3A8-4D8A-A84D-C761605D8A10}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MoqHelpers</RootNamespace>
+    <AssemblyName>MoqHelpers</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.3.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq, Version=4.10.0.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\packages\Moq.4.10.0\lib\net45\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.1\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Additional Property\MockAdditionalHelper.cs" />
+    <Compile Include="Additional Property\IAdditional.cs" />
+    <Compile Include="InSequence\IInvocableFactory.cs" />
+    <Compile Include="InSequence\Invocable.cs" />
+    <Compile Include="InSequence\InvocableFactory.cs" />
+    <Compile Include="InSequence\ISequenceFactory.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\ExceptionsOrReturns\ExceptionsOrReturns.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\ExceptionsOrReturns\ExceptionsOrReturnsInvocationResponder.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\InvocableSequence\IInvocableSequence.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\InvocableSequence\IInvocableSequenceInternal.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\InvocableSequence\IInvocableSequenceNoReturn.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\InvocableSequence\IInvocableSequenceReturn.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\InvocableSequence\IInvocableSequenceReturnT.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\InvocableSequence\InvocableSequenceBase.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\InvocableSequence\InvocableSequenceExceptionsOrReturns.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\InvocableSequence\InvocableSequenceNoReturn.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\InvocableSequence\InvocableSequenceReturns.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\InvocableSequence\InvocationResponder\IInvocationResponder.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\InvocableSequence\InvocationResponder\InvocationResponder.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\InvocableSequence\InvocationResponder\InvocationReturnResponder.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\InvocableSequence\InvocationResponses\IInvocationResponses.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\PassOrThrows\PassOrThrowResponder.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\PassOrThrows\PassOrThrows.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\InvocableSequence\InvocationResponses\InvocationResponses.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\Returns\Returns.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\ExceptionsOrReturns\ExceptionOrReturn.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\ExceptionsOrReturns\ExceptionOrReturnFactory.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\Returns\ReturnsInvocationResponder.cs" />
+    <Compile Include="InSequence\SequenceFactory.cs" />
+    <Compile Include="InSequence\SequenceInvocationIndices.cs" />
+    <Compile Include="InSequence\Sequence.cs" />
+    <Compile Include="InSequence\InSequenceExtensions.cs" />
+    <Compile Include="InSequence\Exceptions\SequenceException.cs" />
+    <Compile Include="InSequence\ISequence.cs" />
+    <Compile Include="InSequence\Sequences.cs" />
+    <Compile Include="InSequence\Exceptions\SequenceSetupException.cs" />
+    <Compile Include="InSequence\SequenceVerifyDelegate.cs" />
+    <Compile Include="InSequence\IInvocable.cs" />
+    <Compile Include="InSequence\Exceptions\SequenceVerifyException.cs" />
+    <Compile Include="InSequence\SetUpWrappers\CallbackWrapper.cs" />
+    <Compile Include="InSequence\SetUpWrappers\ICallbackInvokedHandler.cs" />
+    <Compile Include="InSequence\SetUpWrappers\ICallbackWrapper.cs" />
+    <Compile Include="InSequence\SetUpWrappers\IInvocableGet.cs" />
+    <Compile Include="InSequence\SetUpWrappers\IInvocableNoReturn.cs" />
+    <Compile Include="InSequence\SetUpWrappers\IInvocableReturn.cs" />
+    <Compile Include="InSequence\SetUpWrappers\IVerifiableWrapper.cs" />
+    <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\Verifiable.cs" />
+    <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\VerifiableCallbackResult.cs" />
+    <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\VerifiableCallBaseResult.cs" />
+    <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\VerifiableReturnsResult.cs" />
+    <Compile Include="InSequence\SetUpWrappers\InvocableGet.cs" />
+    <Compile Include="InSequence\SetUpWrappers\InvocableReturn.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\InvocableSequence\InvocableSequenceReturnBase.cs" />
+    <Compile Include="InSequence\SetUpWrappers\InvocableNoReturn.cs" />
+    <Compile Include="InSequence\SetUpWrappers\InvocableBase.cs" />
+    <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\VerifiableReturnsThrowsGetter.cs" />
+    <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\VerifiableReturnsThrows.cs" />
+    <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\VerifiableThrowsResult.cs" />
+    <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\VerifiableVerifies.cs" />
+    <Compile Include="InSequence\SetUpWrappers\VerifiableWrapper.cs" />
+    <Compile Include="InSequence\VerifyUponInvocation.cs" />
+    <Compile Include="MoqHelper.cs" />
+    <Compile Include="SetupExtensions.cs" />
+    <Compile Include="SetupSequenceExtensions.cs" />
+    <Compile Include="ThrewHelper.cs" />
+    <Compile Include="VerifyExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
