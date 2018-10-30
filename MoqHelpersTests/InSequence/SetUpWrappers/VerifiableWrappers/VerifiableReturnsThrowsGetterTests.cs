@@ -16,6 +16,20 @@ namespace MoqHelpersTests.InSequence.SetUpWrappers.VerifiableWrappers
     {
 
     }
+    [TestFixture]
+    internal class VerifiableReturnsThrowsGetter_CallBase_Test : CallBase_Test_Base<IReturnsThrowsGetter<IToMock, int>, IReturnsResult<IToMock>, VerifiableReturnsThrowsGetter<IToMock, int>>
+    {
+        protected override void SetupCallbase(Mock<IReturnsThrowsGetter<IToMock, int>> mockWrapped, IReturnsResult<IToMock> returns)
+        {
+            mockWrapped.Setup(m => m.CallBase()).Returns(returns);
+        }
+
+        protected override void SetupVerifiableWrapper(Mock<IVerifiableWrapper> mockVerifiableWrapper, IReturnsResult<IToMock> wrappedReturn, IReturnsResult<IToMock> verifiableWrapperReturn)
+        {
+            mockVerifiableWrapper.Setup(m => m.WrapReturnsForVerification(wrappedReturn)).Returns(verifiableWrapperReturn);
+        }
+    }
+
 
 
 }
