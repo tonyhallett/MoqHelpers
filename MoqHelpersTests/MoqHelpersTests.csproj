@@ -74,6 +74,7 @@
     <Compile Include="InSequenceTests.cs" />
     <Compile Include="InSequence\InvocableFactoryTests.cs" />
     <Compile Include="InSequence\SetUpWrappers\CallbackWrapperTests.cs" />
+    <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\AtMost_Tests.cs" />
     <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\CallBase_Test_Base.cs" />
     <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\Returns_Tests_Base.cs" />
     <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\Throws_Tests.cs" />
