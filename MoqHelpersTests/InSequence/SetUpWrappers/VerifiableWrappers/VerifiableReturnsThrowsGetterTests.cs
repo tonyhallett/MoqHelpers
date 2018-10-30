@@ -11,7 +11,7 @@ namespace MoqHelpersTests.InSequence.SetUpWrappers.VerifiableWrappers
     {
     }
 
-    [TestFixture]
+    [TestFixture(Description = "VerifiableReturnsThrowsGetter Returns")]
     internal class VerifiableReturnsThrowsGetter_Returns_Tests : Returns_Tests_Base<IReturnsThrowsGetter<IToMock, string>, VerifiableReturnsThrowsGetter<IToMock, string>>
     {
 

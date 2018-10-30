@@ -11,7 +11,6 @@ using System.Reflection;
 
 namespace MoqHelpersTests.InSequence.SetUpWrappers.VerifiableWrappers
 {
-    //todo ObjectDisposedException
     [TestFixture]
     internal abstract class Returns_Tests_Base<TWrapped,TVerifiable>: VerifiableWrappers_Returns_Tests_Base<TWrapped, IReturnsResult<IToMock>, TVerifiable> where TVerifiable : Verifiable<TWrapped> where TWrapped : class
     {
