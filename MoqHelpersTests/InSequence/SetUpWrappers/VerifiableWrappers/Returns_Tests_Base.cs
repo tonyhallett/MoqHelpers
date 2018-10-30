@@ -26,6 +26,18 @@ namespace MoqHelpersTests.InSequence.SetUpWrappers.VerifiableWrappers
 
         public static List<object[]> ReturnsSource()
         {
+            List<MethodInfo> GetInterfaceMethods(Type type)
+            {
+                List<MethodInfo> methodInfos = new List<MethodInfo>();
+                foreach (Type interf in type.GetInterfaces())
+                {
+                    foreach (MethodInfo method in interf.GetMethods())
+                        if (!methodInfos.Contains(method))
+                            methodInfos.Add(method);
+                }
+                return methodInfos;
+            }
+
             object GetArgument(Type parameterType)
             {
                 object parameter = null;
@@ -56,7 +68,8 @@ namespace MoqHelpersTests.InSequence.SetUpWrappers.VerifiableWrappers
                 return Expression.Lambda<Func<TWrapped, IReturnsResult<IToMock>>>(invocation, parameters);
             }
 
-            var returnsMethods = typeof(TWrapped).GetMethods().Where(method => method.Name == "Returns").Select(m =>
+            var methods = GetInterfaceMethods(typeof(TWrapped));
+            var returnsMethods = methods.Where(method => method.Name == "Returns").Select(m =>
             {
                 if (m.IsGenericMethodDefinition)
                 {
