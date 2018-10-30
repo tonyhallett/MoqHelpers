@@ -213,10 +213,12 @@ namespace MoqHelpers.InSequence.SetupWrappers
 
         public void Verifiable()
         {
+            Wrapped.Verifiable();
             VerifiableWrapper.Verifiable();
         }
         public void Verifiable(string failMessage)
         {
+            Wrapped.Verifiable(failMessage);
             VerifiableWrapper.Verifiable(failMessage);
         }
     }
