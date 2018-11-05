@@ -1866,40 +1866,7 @@ namespace MoqHelpersTests
         }
     }
 
-    [TestFixture]
-    public class SequenceInvocationIndices_Tests
-    {
-        [Test]
-        public void Does_Not_Throw_With_Non_Repeated_Non_Negative()
-        {
-            void MethodWithCallIndicesArg(SequenceInvocationIndices callIndices)
-            {
-                callIndices.ToArray();
-            }
-            Assert.That(() => MethodWithCallIndicesArg(new SequenceInvocationIndices { 1, 3 }), Throws.Nothing);
-        }
-        [Test]
-        public void Adding_Negative_Will_Throw()
-        {
-            Assert.That(
-                ThrewHelper.Threw<SequenceSetupException>(() =>
-                {
-                    new SequenceInvocationIndices { 1, -1 };
-                }, (e => e.NegativeCallIndex))
-            );
-        }
-        [Test]
-        public void Adding_Repeat_Will_Throw()
-        {
-            Assert.That(
-                ThrewHelper.Threw<SequenceSetupException>(() =>
-                {
-                    new SequenceInvocationIndices { 1, 1 };
-                }, (e => e.RepeatedCallIndexInSetup))
-            );
-        }
-
-    }
+    
 
     [TestFixture]
     [Ignore("refactoring tests")]

@@ -71,22 +71,48 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Additional Property\MockAdditionalHelperTests.cs" />
     <Compile Include="InSequenceTests.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\InvocableSequence\InvocableSequenceExceptionsOrReturnsTests.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\InvocableSequence\InvocableSequenceReturnBase_Tests.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\InvocableSequence\InvocableSequenceReturnsTests.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\InvocableSequence\InvocableSequence_Sets_Ctor_Args_To_Properties.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\InvocableSequence\InvocationResponses\InvocationResponsesTests.cs" />
+    <Compile Include="InSequence\SequenceInvocationIndicesTests.cs" />
+    <Compile Include="InSequence\SetUpWrappers\Invocables\InvocableBaseTests.cs" />
     <Compile Include="InSequence\InvocableFactoryTests.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\ExceptionsOrReturns\ExceptionsOrReturnsInvocationResponderTests.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\InvocableSequence\InvocableSequenceBaseTests.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\InvocableSequence\InvocableSequenceNoReturnTests.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\InvocableSequence\InvocationResponder\InvocationResponderTests.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\PassOrThrows\PassOrThrowResponderTests.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\PassOrThrows\Responder_Should_Pass_To_Base_Ctor_Arguments.cs" />
+    <Compile Include="InSequence\Sequence In Sequence\Returns\ReturnsInvocationResponderTests.cs" />
     <Compile Include="InSequence\SetUpWrappers\CallbackWrapperTests.cs" />
-    <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\AtMost_Tests.cs" />
-    <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\CallBase_Test_Base.cs" />
-    <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\Returns_Tests_Base.cs" />
-    <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\Throws_Tests.cs" />
+    <Compile Include="InSequence\SetUpWrappers\Invocables\InvocableGetTests.cs" />
+    <Compile Include="InSequence\SetUpWrappers\Invocables\InvocableNoReturnTests.cs" />
+    <Compile Include="InSequence\SetUpWrappers\Invocables\Base Fixtures\Invocable_CallBase_Test.cs" />
+    <Compile Include="InSequence\SetUpWrappers\Invocables\Base Fixtures\Invocable_Ctor_Args_Tests.cs" />
+    <Compile Include="InSequence\SetUpWrappers\Invocables\Base Fixtures\Invocable_Wraps_Test_Base.cs" />
+    <Compile Include="InSequence\SetUpWrappers\Invocables\Base Fixtures\RegistersForCallback_Test.cs" />
+    <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\Base fixtures\AtMost_Tests.cs" />
+    <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\Base fixtures\CallBase_Test_Base.cs" />
+    <Compile Include="InSequence\SetUpWrappers\ReflectionHelper.cs" />
+    <Compile Include="InSequence\SetUpWrappers\Invocables\InvocableReturn_Tests.cs" />
+    <Compile Include="InSequence\SetUpWrappers\Invocables\Base Fixtures\Invocable_Reflection_Tests_Base.cs" />
+    <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\Base fixtures\Returns_Tests_Base.cs" />
+    <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\Base fixtures\Throws_Tests.cs" />
+    <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\Base fixtures\VerifiableWrappers_Returns_Tests_Base.cs" />
     <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\VerifiableCallbackResultTests.cs" />
     <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\VerifiableCallBaseResultTests.cs" />
+    <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\Base fixtures\VerifiableReflectionBase.cs" />
     <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\VerifiableReturnsResultTests.cs" />
     <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\VerifiableReturnsThrowsGetterTests.cs" />
     <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\VerifiableReturnsThrowsTests.cs" />
-    <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\VerifiableTests.cs" />
+    <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\Base fixtures\VerifiableTests.cs" />
     <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\VerifiableThrowsResultTests.cs" />
     <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\VerifiableVerifiesTests.cs" />
-    <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\VerifiableWrappers_Tests_Base.cs" />
+    <Compile Include="InSequence\SetUpWrappers\VerifiableWrappers\Base fixtures\VerifiableWrappers_Tests_Base.cs" />
     <Compile Include="InSequence\SetUpWrappers\VerifiableWrapperTests.cs" />
     <Compile Include="MoqHelperTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -106,6 +132,7 @@
       <Name>MoqHelpers</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

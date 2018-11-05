@@ -60,5 +60,27 @@ namespace MoqHelpersTests
             Assert.That(thrown);
 
         }
+        [Test]
+        public void Threw_With_Predicate_Should_Return_False_If_Predicate_False()
+        {
+            var threw=ThrewHelper.Threw<Exception>(() => throw new Exception(), (s => false));
+            
+            Assert.That(threw,Is.False);
+
+        }
+        [Test]
+        public void Threw_With_Predicate_Should_Return_True_If_Predicate_True()
+        {
+            var threw = ThrewHelper.Threw<Exception>(() => throw new Exception(), (s => true));
+
+            Assert.That(threw, Is.True);
+        }
+        [Test]
+        public void Threw_With_Predicate_Should_Return_False_If_No_Exception()
+        {
+            var threw = ThrewHelper.Threw<Exception>(() => { }, (s => true));
+
+            Assert.That(threw, Is.False);
+        }
     }
 }

@@ -2,7 +2,6 @@
 
 namespace MoqHelpers.InSequence
 {
-    //will want to look at ISequence again
     internal class SequenceFactory : ISequenceFactory
     {
         public ISequence CreateShared(int loops)

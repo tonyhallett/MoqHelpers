@@ -26,7 +26,7 @@ namespace MoqHelpers.InSequence
         }
         public static IEnumerable<IInvocation> WithoutAdditional(this IInvocationList invocationList)
         {
-            //Nthere is no setting to be concerned with
+            //there is no setting to be concerned with
             return invocationList.Where(i => i.Method.Name != "get____Additional");
         }
     }

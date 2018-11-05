@@ -15,86 +15,62 @@ namespace MoqHelpersTests.InSequence.SetUpWrappers
     [TestFixture]
     public class CallbackWrapperTests
     {
-        private Assembly CoreAssembly = Assembly.GetAssembly(typeof(Action<,,,,,,,,,>));
-        private List<int> args;
-        private bool called;
+        public class CallDetails {
+            public List<int> args;
+            public bool called;
+            public void AssertCalled(object[] callArgs)
+            {
+                Assert.That(called, Is.True);
+                Assert.That(args, Is.EquivalentTo(callArgs));
+            }
+        }
 
-        private LambdaExpression CreateActionExpression(int numTypes,Type actionType)
+        private static (Delegate,object[],CallDetails) CreateActionDelegateArgsCallDetails(MethodInfo wrapCallbackMethod)
         {
+            CallDetails callDetails = new CallDetails();
+            var actionType=wrapCallbackMethod.GetParameters()[0].ParameterType;
+            var genericArguments = actionType.GetGenericArguments();
+
+            object[] args = new object[genericArguments.Length];
+
             var listIntType = typeof(List<int>);
             var addMethod = listIntType.GetMethod("Add");
             Expression createArgs = Expression.New(listIntType.GetConstructor(new Type[] { }));
 
-            ParameterExpression listVar = Expression.Variable(typeof(List<int>),"delegateArgs");
+            ParameterExpression listVar = Expression.Variable(typeof(List<int>), "delegateArgs");
             Expression assignArgsToVariable = Expression.Assign(listVar, createArgs);
 
 
-            List<Expression> block = new List<Expression> {assignArgsToVariable };
-            ParameterExpression[] parameters = new ParameterExpression[numTypes];
+            List<Expression> block = new List<Expression> { assignArgsToVariable };
+            ParameterExpression[] parameters = new ParameterExpression[genericArguments.Length];
             
-            for(var i = 0; i < numTypes; i++)
+            for (var i = 0; i < genericArguments.Length; i++)
             {
-                var parameterExpression = Expression.Parameter(typeof(int),"param"+(i+1).ToString());
+                var parameterExpression = Expression.Parameter(typeof(int), "param" + (i + 1).ToString());
                 block.Add(Expression.Call(listVar, addMethod, parameterExpression));
                 parameters[i] = parameterExpression;
+                args[i] = i;
             }
 
 
-            Expression setArgs = Expression.Assign(Expression.Field(Expression.Constant(this), "args"), listVar);
+            Expression setArgs = Expression.Assign(Expression.Field(Expression.Constant(callDetails), "args"), listVar);
             block.Add(setArgs);
-            Expression setCalled = Expression.Assign(Expression.Field(Expression.Constant(this), "called"), Expression.Constant(true));
+            Expression setCalled = Expression.Assign(Expression.Field(Expression.Constant(callDetails), "called"), Expression.Constant(true));
             block.Add(setCalled);
             var expressionBlock = Expression.Block(new ParameterExpression[] { listVar }, block);
 
-            return Expression.Lambda(actionType,expressionBlock, parameters);
-            
+            return (Expression.Lambda(actionType, expressionBlock, parameters).Compile(),args,callDetails);
+
         }
-        private object[] CreateArgs(int numTypes)
-        {
-            var args = new object[numTypes];
-            var counter = 0;
-            for(var i = 0; i < numTypes; i++)
-            {
-                args[i] = counter;
-                counter++;
-            }
-            return args;
-        }
-        private Type[] GetIntTypes(int numTypes)
+        private static Type[] GetIntTypes(int numTypes)
         {
             return Enumerable.Range(0, numTypes).Select(_ => typeof(int)).ToArray();
         }
-        private Type GetActionType(int numTypes)
+        
+        private static List<MethodInfo> GetClosedWrapCallbackActionMethods()
         {
-            if (numTypes == 0)
-            {
-                return typeof(Action);
-            }
-            else
-            {
-                Type genericActionType = null;
-                var actionTypeName = "System.Action`" + numTypes;
-                if (numTypes < 9)
-                {
-                    genericActionType = Type.GetType(actionTypeName);
-                }
-                else
-                {
-                    genericActionType = CoreAssembly.GetType(actionTypeName);
-                }
-                
-                return genericActionType.MakeGenericType(GetIntTypes(numTypes));
-            }
-        }
-        [Test]
-        public void WrapCallback_Should_Return_Action_That_Invokes_Handler_And_Provided()
-        {
-            var callbackWrapper = new CallbackWrapper();
-            var mockCallbackInvokedHandler = new Mock<ICallbackInvokedHandler>();
-            callbackWrapper.InvokedHandler = mockCallbackInvokedHandler.Object;
-
-            var wrapCallbackMethods = typeof(CallbackWrapper).GetMethods().Where(m=>m.Name=="WrapCallback");
-            var actionWrapCallbackMethods = wrapCallbackMethods.Where(m => m.GetParameters()[0].Name.StartsWith("action")).Select(m =>
+            var wrapCallbackMethods = typeof(CallbackWrapper).GetMethods().Where(m => m.Name == "WrapCallback");
+            return wrapCallbackMethods.Where(m => m.GetParameters()[0].ParameterType!=typeof(Delegate)).Select(m =>
             {
                 if (m.IsGenericMethodDefinition)
                 {
@@ -103,34 +79,36 @@ namespace MoqHelpersTests.InSequence.SetUpWrappers
                 }
                 return m;
             }).ToList();
+        }
 
-            void Reset()
+        [TestCaseSource("Source")]
+        public void WrapCallback_Should_Return_Action_That_Invokes_Handler_And_Provided2(MethodInfo wrapCallbackMethod,Delegate action,object[] args,CallDetails callDetails)
+        {
+            var callbackWrapper = new CallbackWrapper();
+            var mockCallbackInvokedHandler = new Mock<ICallbackInvokedHandler>();
+            callbackWrapper.InvokedHandler = mockCallbackInvokedHandler.Object;
+
+            var wrappedAction = (Delegate)wrapCallbackMethod.Invoke(callbackWrapper, new object[] { action });
+
+            wrappedAction.DynamicInvoke(args);
+
+            callDetails.AssertCalled(args);
+            mockCallbackInvokedHandler.Verify(m => m.Invoked());
+        }
+        public static IEnumerable<TestCaseData> Source()
+        {
+            var actionWrapCallbackMethods = GetClosedWrapCallbackActionMethods();
+            return actionWrapCallbackMethods.Select(m =>
             {
-                args = null;
-                called = false;
-            }
-
-            var numWrapMethods = 17;
-            var numTypes = Enumerable.Range(0, numWrapMethods);
-                
-            foreach (var num in numTypes)
-            {
-                Reset();
-
-                var callArgs = CreateArgs(num);
-                var actionType = GetActionType(num);
-
-                var expression = CreateActionExpression(num,actionType);
-                var action = expression.Compile();
-
-                MethodInfo wrapCallbackMethod = actionWrapCallbackMethods[num];
-                var wrappedAction = (Delegate)wrapCallbackMethod.Invoke(callbackWrapper, new object[] { action });
-                wrappedAction.DynamicInvoke(callArgs);
-
-                Assert.That(called, Is.True);
-                Assert.That(args, Is.EquivalentTo(callArgs));
-            }
-            mockCallbackInvokedHandler.Verify(m => m.Invoked(), Times.Exactly(numWrapMethods));
+                var (del,args,callDetails)=CreateActionDelegateArgsCallDetails(m);
+                return new TestCaseData(m,del, args, callDetails);
+            });
+        }
+        
+        [Test]
+        public void Wrap_Delegate()
+        {
+            Assert.Fail("Not implemented");
         }
     }
 }

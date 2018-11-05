@@ -22,10 +22,7 @@ namespace MoqHelpers.InSequence
         }
         internal int Count => callIndices.Count;
         
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return callIndices.GetEnumerator();
-        }
+        
         public void Add(int callIndex)
         {
             if (callIndex < 0)
@@ -39,6 +36,10 @@ namespace MoqHelpers.InSequence
             callIndices.Add(callIndex);
         }
 
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return callIndices.GetEnumerator();
+        }
         public IEnumerator<int> GetEnumerator()
         {
             return ((IEnumerable<int>)callIndices).GetEnumerator();
