@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MoqHelpers.InSequence
+namespace MoqHelpers.InSequence.Invocables
 {
     public interface IInvocable
     {

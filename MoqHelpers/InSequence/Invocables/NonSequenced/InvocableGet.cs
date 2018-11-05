@@ -1,8 +1,9 @@
 ﻿using Moq;
 using Moq.Language.Flow;
+using MoqHelpers.InSequence.Invocables.NonSequenced.VerifiableWrappers;
 using System;
 
-namespace MoqHelpers.InSequence.SetupWrappers
+namespace MoqHelpers.InSequence.Invocables.NonSequenced
 {
     
     internal class InvocableGet<TMock, TProperty> :InvocableBase<ISetupGetter<TMock, TProperty>>, IInvocableGet<TMock, TProperty> where TMock : class

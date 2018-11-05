@@ -1,9 +1,10 @@
 ﻿using Moq;
 using Moq.Language;
 using Moq.Language.Flow;
+using MoqHelpers.InSequence.Invocables.NonSequenced.VerifiableWrappers;
 using System;
 
-namespace MoqHelpers.InSequence.SetupWrappers
+namespace MoqHelpers.InSequence.Invocables.NonSequenced
 {
     internal class InvocableNoReturn<TMock> : InvocableBase<ISetup<TMock>>, IInvocableNoReturn<TMock> where TMock : class
     {

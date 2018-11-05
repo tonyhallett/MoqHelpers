@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MoqHelpers.InSequence.SetUpWrappers
+namespace MoqHelpers.InSequence.Invocables.Sequenced
 {
     internal abstract class InvocableSequenceReturnBase<TMock, TReturn,TResponse> : InvocableSequenceBase<ISetup<TMock, TReturn>, TResponse>, IInvocableSequenceReturn where TMock : class
     {

@@ -1,6 +1,7 @@
 ﻿using Moq;
 using Moq.Language.Flow;
-using MoqHelpers.InSequence.SetUpWrappers;
+using MoqHelpers.InSequence.Invocables;
+using MoqHelpers.InSequence.Invocables.Sequenced;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;

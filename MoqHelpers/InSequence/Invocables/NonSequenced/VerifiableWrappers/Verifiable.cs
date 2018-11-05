@@ -1,4 +1,4 @@
-﻿namespace MoqHelpers.InSequence.SetupWrappers
+﻿namespace MoqHelpers.InSequence.Invocables.NonSequenced.VerifiableWrappers
 {
     internal abstract class Verifiable<T> 
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MoqHelpers.InSequence.SetUpWrappers
+namespace MoqHelpers.InSequence.Invocables.Sequenced
 {
     public class PassOrThrows : InvocationResponses<Exception> { }
 }

@@ -1,5 +1,6 @@
 ﻿using Moq;
-using MoqHelpers.InSequence.SetupWrappers;
+using MoqHelpers.Additional;
+using MoqHelpers.InSequence.Invocables;
 using System;
 using System.Collections.Generic;
 using System.Linq;

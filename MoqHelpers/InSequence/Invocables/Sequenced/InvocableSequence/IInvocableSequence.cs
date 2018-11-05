@@ -1,4 +1,4 @@
-﻿namespace MoqHelpers.InSequence.SetUpWrappers
+﻿namespace MoqHelpers.InSequence.Invocables.Sequenced
 {
     public interface IInvocableSequence:IInvocable
     {

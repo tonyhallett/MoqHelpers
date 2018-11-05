@@ -1,6 +1,6 @@
 ﻿using Moq.Language.Flow;
 
-namespace MoqHelpers.InSequence.SetUpWrappers
+namespace MoqHelpers.InSequence.Invocables.Sequenced
 {
     internal class ExceptionsOrReturnsInvocationResponder<TMock, TReturn> : InvocationResponder<ISetup<TMock, TReturn>, ExceptionOrReturn<TReturn>>   where TMock : class
     {

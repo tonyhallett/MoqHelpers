@@ -2,7 +2,7 @@
 using Moq.Language;
 using Moq.Language.Flow;
 
-namespace MoqHelpers.InSequence.SetupWrappers
+namespace MoqHelpers.InSequence.Invocables.NonSequenced.VerifiableWrappers
 {
     internal class VerifiableReturnsResult<TResult> :Verifiable<IReturnsResult<TResult>>, IReturnsResult<TResult>
     {

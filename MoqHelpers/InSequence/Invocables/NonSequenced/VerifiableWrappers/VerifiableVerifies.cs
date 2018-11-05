@@ -1,7 +1,7 @@
 ﻿using System;
 using Moq.Language;
 
-namespace MoqHelpers.InSequence.SetupWrappers
+namespace MoqHelpers.InSequence.Invocables.NonSequenced.VerifiableWrappers
 {
     internal class VerifiableVerifies : Verifiable<IVerifies>,IVerifies
     {

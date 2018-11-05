@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MoqHelpers.InSequence.SetupWrappers
+namespace MoqHelpers.InSequence.Invocables
 {
     internal interface ICallbackWrapper
     {

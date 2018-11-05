@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MoqHelpers.InSequence
+namespace MoqHelpers.InSequence.Invocables.Sequenced
 {
     public class ExceptionOrReturn<TReturn>
     {

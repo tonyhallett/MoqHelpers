@@ -2,7 +2,7 @@
 using Moq.Language.Flow;
 using System;
 
-namespace MoqHelpers.InSequence.SetUpWrappers
+namespace MoqHelpers.InSequence.Invocables.Sequenced
 {
 
     internal class InvocableSequenceNoReturn<TMock> : InvocableSequenceBase<ISetup<TMock>,Exception>, IInvocableSequenceNoReturn<TMock> where TMock : class

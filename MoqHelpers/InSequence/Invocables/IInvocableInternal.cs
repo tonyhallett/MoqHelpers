@@ -1,4 +1,4 @@
-﻿namespace MoqHelpers.InSequence
+﻿namespace MoqHelpers.InSequence.Invocables
 {
     internal interface IInvocableInternal<TWrapped> : IInvocable
     {

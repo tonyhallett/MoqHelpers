@@ -1,4 +1,4 @@
-﻿namespace MoqHelpers.InSequence.SetupWrappers
+﻿namespace MoqHelpers.InSequence.Invocables
 {
     internal interface ICallbackInvokedHandler
     {

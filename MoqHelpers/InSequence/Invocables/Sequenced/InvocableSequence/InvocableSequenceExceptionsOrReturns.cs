@@ -1,7 +1,7 @@
 ﻿using Moq;
 using Moq.Language.Flow;
 
-namespace MoqHelpers.InSequence.SetUpWrappers
+namespace MoqHelpers.InSequence.Invocables.Sequenced
 {
     internal class InvocableSequenceExceptionsOrReturns<TMock, TReturn> : InvocableSequenceReturnBase<TMock, TReturn, ExceptionOrReturn<TReturn>>, IInvocableSequenceReturn<TMock, TReturn, ExceptionOrReturn<TReturn>> where TMock:class
     {

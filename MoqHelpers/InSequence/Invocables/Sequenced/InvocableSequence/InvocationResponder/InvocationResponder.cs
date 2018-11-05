@@ -1,6 +1,6 @@
 ﻿using Moq.Language.Flow;
 
-namespace MoqHelpers.InSequence.SetUpWrappers
+namespace MoqHelpers.InSequence.Invocables.Sequenced
 {
     internal abstract class InvocationResponder<TInvocation,TResponse>: IInvocationResponder<TInvocation,TResponse>
     {

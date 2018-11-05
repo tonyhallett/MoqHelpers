@@ -1,7 +1,7 @@
 ﻿using Moq.Language.Flow;
 using System;
 
-namespace MoqHelpers.InSequence.SetupWrappers
+namespace MoqHelpers.InSequence.Invocables.NonSequenced.VerifiableWrappers
 {
     internal class VerifiableReturnsThrowsGetter<TMock, TProperty> :Verifiable<IReturnsThrowsGetter<TMock, TProperty>>, IReturnsThrowsGetter<TMock, TProperty> where TMock:class
     {

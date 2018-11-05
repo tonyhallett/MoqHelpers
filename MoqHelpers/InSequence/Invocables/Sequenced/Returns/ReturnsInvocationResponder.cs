@@ -1,7 +1,7 @@
 ﻿using Moq.Language.Flow;
 using System;
 
-namespace MoqHelpers.InSequence.SetUpWrappers
+namespace MoqHelpers.InSequence.Invocables.Sequenced
 {
     internal class ReturnsInvocationResponder<TMock, TReturn> : InvocationResponder<ISetup<TMock, TReturn>, TReturn> where TMock : class
     {

@@ -1,4 +1,4 @@
-﻿using MoqHelpers.InSequence.SetupWrappers;
+﻿using MoqHelpers.InSequence.Invocables;
 using System.Collections.Generic;
 
 namespace MoqHelpers.InSequence

@@ -1,9 +1,11 @@
 ﻿using Moq;
 using Moq.Language.Flow;
 using MoqHelpers;
+using MoqHelpers.Additional;
 using MoqHelpers.InSequence;
-using MoqHelpers.InSequence.SetupWrappers;
-using MoqHelpers.InSequence.SetUpWrappers;
+using MoqHelpers.InSequence.Invocables;
+using MoqHelpers.InSequence.Invocables.NonSequenced;
+using MoqHelpers.InSequence.Invocables.Sequenced;
 using NUnit.Framework;
 using System;
 using System.Collections;

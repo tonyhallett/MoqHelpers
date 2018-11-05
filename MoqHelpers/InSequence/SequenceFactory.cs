@@ -1,4 +1,5 @@
 ﻿using Moq;
+using MoqHelpers.Additional;
 
 namespace MoqHelpers.InSequence
 {

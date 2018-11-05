@@ -1,9 +1,9 @@
 ﻿using Moq;
 using Moq.Language;
-using MoqHelpers.InSequence.SetupWrappers;
+using MoqHelpers.InSequence.Invocables;
 using System;
 
-namespace MoqHelpers.InSequence.SetUpWrappers
+namespace MoqHelpers.InSequence.Invocables.Sequenced
 {
     internal abstract class InvocableSequenceBase<TWrapped,TResponse> : InvocableBase<TWrapped>, IInvocableSequenceInternal<TWrapped, TResponse> where TWrapped : IVerifies, IThrows
     {

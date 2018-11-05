@@ -1,9 +1,11 @@
 ﻿using Moq;
 using Moq.Language;
 using Moq.Language.Flow;
+using MoqHelpers.InSequence.Invocables.NonSequenced;
+using MoqHelpers.InSequence.Invocables.NonSequenced.VerifiableWrappers;
 using System;
 
-namespace MoqHelpers.InSequence.SetupWrappers
+namespace MoqHelpers.InSequence.Invocables
 {
     internal abstract class InvocableBase<TWrapped>:  IInvocableInternal<TWrapped>,ICallbackInvokedHandler where TWrapped:IVerifies,IThrows
     {

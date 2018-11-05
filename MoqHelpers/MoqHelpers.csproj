@@ -57,8 +57,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Additional Property\MockAdditionalHelper.cs" />
-    <Compile Include="Additional Property\IAdditional.cs" />
+    <Compile Include="Additional\MockAdditionalHelper.cs" />
+    <Compile Include="Additional\IAdditional.cs" />
     <Compile Include="InSequence\Invocables\IInvocableFactory.cs" />
     <Compile Include="InSequence\Invocables\IInvocableInternal.cs" />
     <Compile Include="InSequence\Invocables\Invocable.cs" />

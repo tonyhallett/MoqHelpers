@@ -1,11 +1,12 @@
 ﻿using Moq;
 using Moq.Language;
 using Moq.Language.Flow;
-using MoqHelpers.InSequence.SetupWrappers;
-using MoqHelpers.InSequence.SetUpWrappers;
+using MoqHelpers.InSequence.Invocables.NonSequenced;
+using MoqHelpers.InSequence.Invocables.Sequenced;
 using System;
 
-namespace MoqHelpers.InSequence
+
+namespace MoqHelpers.InSequence.Invocables
 {
     internal class InvocableFactory : IInvocableFactory
     {

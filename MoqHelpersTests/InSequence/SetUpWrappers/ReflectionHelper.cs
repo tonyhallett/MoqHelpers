@@ -1,7 +1,7 @@
 ﻿using Moq;
 using Moq.Language;
 using Moq.Language.Flow;
-using MoqHelpers.InSequence.SetupWrappers;
+using MoqHelpers.InSequence.Invocables;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
