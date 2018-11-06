@@ -5,7 +5,7 @@ using NUnit.Framework;
 using System;
 using System.Reflection;
 
-namespace MoqHelpersTests.InSequence.SetUpWrappers.VerifiableWrappers
+namespace MoqHelpersTests.InSequence.Invocables.NonSequenced.VerifiableWrappers
 {
     [TestFixture]
     internal abstract class VerifiableReflectionBase<TWrapped, TWrappedReturn, TVerifiable> : VerifiableWrappers_Returns_Tests_Base<TWrapped, TWrappedReturn, TVerifiable> where TVerifiable : Verifiable<TWrapped> where TWrapped : class where TWrappedReturn : class

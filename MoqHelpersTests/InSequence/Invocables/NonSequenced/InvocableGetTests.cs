@@ -9,7 +9,7 @@ using System;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace MoqHelpersTests.InSequence.SetUpWrappers
+namespace MoqHelpersTests.InSequence.Invocables.NonSequenced
 {
     [TestFixture]
     internal class InvocableGet_CallBase_Test : Invocable_CallBase_Test<ISetupGetter<IToMock, int>, IReturnsResult<IToMock>, InvocableGet<IToMock, int>>

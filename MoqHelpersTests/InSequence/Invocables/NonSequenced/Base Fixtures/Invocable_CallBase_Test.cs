@@ -4,7 +4,7 @@ using MoqHelpers.InSequence.Invocables;
 using MoqHelpers.InSequence.Invocables.NonSequenced.VerifiableWrappers;
 using NUnit.Framework;
 
-namespace MoqHelpersTests.InSequence.SetUpWrappers
+namespace MoqHelpersTests.InSequence.Invocables.NonSequenced
 {
     [TestFixture]
     internal abstract class Invocable_CallBase_Test<TWrapped, TWrappedReturn, TInvocable>: Invocable_Wraps_Test_Base<TWrapped, TWrappedReturn, TInvocable> where TWrappedReturn : class where TWrapped : class, IVerifies, IThrows where TInvocable : InvocableBase<TWrapped>

@@ -11,7 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace MoqHelpersTests.InSequence.SetUpWrappers
+namespace MoqHelpersTests.InSequence.Invocables.NonSequenced
 {
     [TestFixture]
     internal class InvocableNoReturn_AtMost_Tests : Invocable_Wraps_Test_Base<ISetup<IToMock>, IVerifies, InvocableNoReturn<IToMock>>

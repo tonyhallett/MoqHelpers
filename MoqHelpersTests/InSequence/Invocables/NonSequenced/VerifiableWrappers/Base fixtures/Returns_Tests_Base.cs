@@ -11,7 +11,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace MoqHelpersTests.InSequence.SetUpWrappers.VerifiableWrappers
+namespace MoqHelpersTests.InSequence.Invocables.NonSequenced.VerifiableWrappers
 {
     [TestFixture]
     internal abstract class Returns_Tests_Base<TWrapped, TVerifiable>: VerifiableReflectionBase<TWrapped, IReturnsResult<IToMock>, TVerifiable> where TVerifiable : Verifiable<TWrapped>  where TWrapped:class

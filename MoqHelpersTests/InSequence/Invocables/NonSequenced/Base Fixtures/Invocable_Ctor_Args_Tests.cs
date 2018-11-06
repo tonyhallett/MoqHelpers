@@ -6,7 +6,7 @@ using MoqHelpers.InSequence.Invocables.NonSequenced.VerifiableWrappers;
 using NUnit.Framework;
 using System.Reflection;
 
-namespace MoqHelpersTests.InSequence.SetUpWrappers
+namespace MoqHelpersTests.InSequence.Invocables.NonSequenced
 {
     [TestFixture]
     internal abstract class Invocable_Ctor_Args_Tests<TWrapped> where TWrapped:class,IVerifies,IThrows

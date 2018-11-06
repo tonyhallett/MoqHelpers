@@ -3,7 +3,7 @@ using MoqHelpers.InSequence.Invocables;
 using MoqHelpers.InSequence.Invocables.NonSequenced.VerifiableWrappers;
 using NUnit.Framework;
 
-namespace MoqHelpersTests.InSequence.SetUpWrappers.VerifiableWrappers
+namespace MoqHelpersTests.InSequence.Invocables.NonSequenced.VerifiableWrappers
 {
     [TestFixture]
     internal abstract class CallBase_Test_Base<TWrapped, TWrappedReturn, TVerifiable> : 

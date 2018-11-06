@@ -10,7 +10,7 @@ using System.Reflection.Emit;
 using System.Runtime.CompilerServices;
 
 
-namespace MoqHelpersTests.InSequence.SetUpWrappers
+namespace MoqHelpersTests.InSequence.Invocables.NonSequenced
 {
     [TestFixture]
     public class CallbackWrapperTests

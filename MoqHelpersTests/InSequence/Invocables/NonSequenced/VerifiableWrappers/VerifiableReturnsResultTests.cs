@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace MoqHelpersTests.InSequence.SetUpWrappers.VerifiableWrappers
+namespace MoqHelpersTests.InSequence.Invocables.NonSequenced.VerifiableWrappers
 {
     [TestFixture]
     internal class VerifiableReturnsResult_Verifies_Tests : VerifiableTests<IReturnsResult<IToMock>, VerifiableReturnsResult<IToMock>>

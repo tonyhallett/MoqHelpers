@@ -10,7 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace MoqHelpersTests.InSequence.SetUpWrappers
+namespace MoqHelpersTests.InSequence.Invocables.NonSequenced
 {
     internal class InvocableReturn_Callback_Tests : Invocable_Reflection_Tests_Base<ISetup<IToMock, int>, IReturnsThrows<IToMock, int>, InvocableReturn<IToMock, int>>
     {

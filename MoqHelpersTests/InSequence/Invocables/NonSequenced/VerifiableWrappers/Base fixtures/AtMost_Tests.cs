@@ -3,7 +3,7 @@ using MoqHelpers.InSequence.Invocables;
 using MoqHelpers.InSequence.Invocables.NonSequenced.VerifiableWrappers;
 using NUnit.Framework;
 
-namespace MoqHelpersTests.InSequence.SetUpWrappers.VerifiableWrappers
+namespace MoqHelpersTests.InSequence.Invocables.NonSequenced.VerifiableWrappers
 {
     [TestFixture(Description = "AtMost Tests")]
     internal abstract class AtMost_Tests<TWrapped,TVerifiable>: VerifiableWrappers_Returns_Tests_Base<TWrapped, IVerifies, TVerifiable>  where TWrapped :class, IOccurrence where TVerifiable : Verifiable<TWrapped>, IOccurrence

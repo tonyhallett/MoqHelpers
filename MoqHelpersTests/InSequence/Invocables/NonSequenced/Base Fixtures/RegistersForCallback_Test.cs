@@ -5,7 +5,7 @@ using NUnit.Framework;
 using System;
 using System.Reflection;
 
-namespace MoqHelpersTests.InSequence.SetUpWrappers
+namespace MoqHelpersTests.InSequence.Invocables.NonSequenced
 {
     [TestFixture]
     internal abstract class Invocable_RegistersForCallback_Test<TWrapped,TInvocable> where TWrapped:class,IVerifies,IThrows where TInvocable:InvocableBase<TWrapped>

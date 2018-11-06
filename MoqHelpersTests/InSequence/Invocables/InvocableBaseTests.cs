@@ -6,7 +6,7 @@ using MoqHelpers.InSequence.Invocables.NonSequenced.VerifiableWrappers;
 using NUnit.Framework;
 using System;
 
-namespace MoqHelpersTests.InSequence
+namespace MoqHelpersTests.InSequence.Invocables
 {
     [TestFixture]
     public class InvocableBaseTests

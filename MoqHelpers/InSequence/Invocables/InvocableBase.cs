@@ -47,12 +47,10 @@ namespace MoqHelpers.InSequence.Invocables
         
         public Mock Mock => mock;
         
-
         public int ConsecutiveInvocations => consecutiveInvocations;
         public SequenceInvocationIndices SequenceInvocationIndices { get => sequenceInvocationIndices; set => sequenceInvocationIndices = value; }
 
         TWrapped IInvocableInternal<TWrapped>.Wrapped => wrapped;
-
         ISequence IInvocableInternal<TWrapped>.Sequence => sequence;
 
         public bool Verified

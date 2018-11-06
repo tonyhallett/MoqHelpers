@@ -9,7 +9,7 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 
-namespace MoqHelpersTests.InSequence
+namespace MoqHelpersTests.InSequence.Invocables
 {
     [TestFixture]
     public abstract class InvocableFactory_Tests_Base<TWrapped>

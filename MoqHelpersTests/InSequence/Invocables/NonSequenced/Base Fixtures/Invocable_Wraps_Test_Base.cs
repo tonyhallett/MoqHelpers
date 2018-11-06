@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MoqHelpersTests.InSequence.SetUpWrappers
+namespace MoqHelpersTests.InSequence.Invocables.NonSequenced
 {
     [TestFixture]
     internal abstract class Invocable_Wraps_Test_Base<TWrapped, TWrappedReturn,TInvocable> where TWrappedReturn:class where TWrapped:class, IVerifies, IThrows where TInvocable:InvocableBase<TWrapped>
